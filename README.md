@@ -19,3 +19,4 @@ npx skills add hsablonniere/skills -a claude-code -a codex
 
 | Skill | Description |
 |-------|-------------|
+| [commit](skills/commit/) | Create clean, conventional git commits |
