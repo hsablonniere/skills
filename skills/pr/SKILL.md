@@ -92,6 +92,7 @@ Also ask for **linked issues** if the user hasn't mentioned any.
 Use **only the relevant sections** — skip empty ones:
 
 ```markdown
+<!-- Only if the user provided a real issue number -->
 Closes #NN
 
 ## Context
@@ -131,6 +132,7 @@ Summary of the approach and technical choices.
 - Focus on the **why** and **how to review**, not the what (the diff is there for that)
 - Only include sections that have meaningful content
 - Only include TODO section if the user explicitly asked for a draft
+- Only include `Closes #NN` if the user provided a real issue number — never use placeholders like `#XXXXX` or `#NN`
 
 ### 7. Push branch if needed
 
