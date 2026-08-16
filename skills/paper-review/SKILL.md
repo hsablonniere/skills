@@ -1,7 +1,6 @@
 ---
 name: paper-review
 description: Conversational code review written to a markdown file the reviewer annotates, then acted on. Use when the user asks to review the current branch or diff, runs /paper-review (optionally with "working tree", "staging", "rescan", or a ref/range), says "review my changes", or asks to act on their annotations in an existing review file.
-allowed-tools: Bash(git:*), Bash(gh:*), Read, Write, Edit, Grep, Glob, Task
 ---
 
 # Paper Review
@@ -23,7 +22,7 @@ Conversational code review as a **living markdown file**. The agent writes findi
 
 ## Engine — thin orchestrator, one fat sub-agent
 
-The whole job runs inside **one sub-agent** (Task tool). The main thread is a dispatcher, nothing more.
+The whole job runs inside **one sub-agent** (Agent tool). The main thread is a dispatcher, nothing more.
 
 **The orchestrator (main thread) does ONLY this:**
 1. Read the current branch (`git branch --show-current`) to name the file.
