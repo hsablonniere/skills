@@ -1,8 +1,6 @@
 ---
 name: pull-request
 description: Create a Pull Request (GitHub) or Merge Request (GitLab) with a well-crafted title and description. Use when the user asks to create a PR, MR, open a pull request, submit a merge request, or says something like "open a PR".
-model: haiku
-allowed-tools: Bash(git:*), Bash(gh:*), Bash(glab:*), Read
 ---
 
 # Pull Request / Merge Request
