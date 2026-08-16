@@ -1,8 +1,6 @@
 ---
 name: commit
 description: Create a git commit with a well-crafted conventional commit message. Use when the user asks to commit, create a commit, or says something like "commit this".
-model: haiku
-allowed-tools: Bash(git:*), Bash(fmt:*), Read
 ---
 
 # Commit
