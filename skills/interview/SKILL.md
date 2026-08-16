@@ -2,7 +2,6 @@
 name: interview
 description: Interview the user to deeply explore an idea, feature, or problem through Q&A. Use when the user asks to be interviewed, wants to think through something, or needs help clarifying a concept.
 argument-hint: [what you want to explore]
-model: opus
 allowed-tools: AskUserQuestion, Read
 ---
 
