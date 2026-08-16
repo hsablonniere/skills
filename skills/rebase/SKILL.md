@@ -1,8 +1,6 @@
 ---
 name: rebase
 description: Perform a non-interactive interactive git rebase. Use when the user asks to rebase, squash, reorder, drop, or rename commits.
-model: haiku
-allowed-tools: Bash(git:*), Bash(*/git-rebase-non-interactive.js:*)
 ---
 
 # Interactive Rebase
