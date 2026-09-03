@@ -21,6 +21,7 @@ npx skills add hsablonniere/skills -a claude-code -a codex
 |-------|-------------|
 | [commit](skills/commit/) | Create clean, conventional git commits |
 | [interview](skills/interview/) | Deep Q&A to explore and clarify an idea |
+| [issue](skills/issue/) | Create issues focused on the problem, not the solution |
 | [paper-review](skills/paper-review/) | Conversational code review in a markdown file you annotate and the agent acts on |
 | [pull-request](skills/pull-request/) | Create Pull Requests / Merge Requests |
 | [rebase](skills/rebase/) | Non-interactive interactive rebase |
