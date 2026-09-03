@@ -38,7 +38,8 @@ Get the default branch:
 - GitHub: `gh pr view --json url`
 - GitLab: `glab mr view`
 
-If one already exists, show the URL and ask the user if they want to update its title and description. If yes, continue the workflow and update the existing PR/MR at the end instead of creating a new one.
+If one already exists, show the URL and ask the user if they want to update its title and description.
+If yes, continue the workflow and update the existing PR/MR at the end instead of creating a new one.
 
 ### 4. Get commits and diff
 
@@ -164,6 +165,7 @@ Add `--draft` if the user asked for a draft.
 - GitHub: `gh pr edit --title "<title>" --body "<body>"`
 - GitLab: `glab mr update --title "<title>" --description "<body>"`
 
-Pass `<body>` via a heredoc, never a literal `"..."` string. Write each paragraph as a single unwrapped line — do not hard-wrap prose at ~80 characters like a text editor would; let Markdown soft-wrap it.
+Pass `<body>` via a heredoc, never a literal `"..."` string.
+Write each paragraph as a single unwrapped line — do not hard-wrap prose at ~80 characters like a text editor would; let Markdown soft-wrap it.
 
 Show the PR/MR URL when done.

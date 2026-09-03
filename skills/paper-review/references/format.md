@@ -1,6 +1,8 @@
 # Review File Format
 
-The review file is GitHub-flavored markdown. Agent lines are quoted (`>`); the human writes plain text. Status lives in each item title.
+The review file is GitHub-flavored markdown.
+Agent lines are quoted (`>`); the human writes plain text.
+Status lives in each item title.
 
 ## Template
 
@@ -24,9 +26,11 @@ The review file is GitHub-flavored markdown. Agent lines are quoted (`>`); the h
 ```
 
 Rules:
-- Item numbers are stable and never reused. New items in apply mode append with the next number.
+- Item numbers are stable and never reused.
+  New items in apply mode append with the next number.
 - Title status is one of `[OPEN]` `[DONE]` `[WONTFIX]` `[DISCUSS]`.
-- Group nothing; a flat numbered list keeps annotation simple.
+- Group nothing.
+  A flat numbered list keeps annotation simple.
 - Get the date from `date +%F` — do not rely on model-internal knowledge of the date.
 
 ## Annotated round-trip example

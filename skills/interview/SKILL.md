@@ -11,7 +11,8 @@ allowed-tools: AskUserQuestion, Read
 
 Read what the user wants to explore: <topic>$ARGUMENTS</topic>
 
-Interview the user in depth using AskUserQuestion. Adapt the questions to the topic — this could be a feature, an architecture decision, a process, a problem to solve, or any idea worth exploring.
+Interview the user in depth using AskUserQuestion.
+Adapt the questions to the topic — this could be a feature, an architecture decision, a process, a problem to solve, or any idea worth exploring.
 
 Dig into:
 - Goals and constraints
@@ -22,6 +23,7 @@ Dig into:
 
 Don't ask surface-level questions — challenge assumptions and explore the hard parts.
 
-Keep interviewing until the user says "done" or signals they're ready to move on. Do not stop early.
+Keep interviewing until the user says "done" or signals they're ready to move on.
+Do not stop early.
 
 When the interview is over, provide a concise summary of what was clarified, then let the user decide the next step (plan mode, implementation, write a doc, etc.).

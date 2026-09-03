@@ -31,3 +31,9 @@ description: Brief description of when this skill should be used
 - Body: use imperative form ("Run the tests", not "You should run the tests")
 - Keep SKILL.md under 2,000 words — move details into `references/`
 - Use `allowed-tools` in frontmatter to restrict tool access when relevant
+
+## Markdown style
+
+One sentence per line.
+This makes diffs and prose easier to review in raw form, and Markdown soft-wraps it back into a single paragraph when rendered, so it looks identical in HTML.
+Doesn't apply inside code blocks.

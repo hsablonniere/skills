@@ -29,7 +29,8 @@ Extract scopes already used in the project to stay consistent:
 git log --oneline --no-merges | sed -n 's/^[^ ]* [a-z]*(\([^)]*\)).*/\1/p' | sort | uniq -c | sort -rn
 ```
 
-Use one of these scopes if it fits. Only invent a new scope if none matches.
+Use one of these scopes if it fits.
+Only invent a new scope if none matches.
 
 ### 3. Analyze the diff
 
@@ -81,7 +82,9 @@ Each paragraph is between 125 and 250 characters.
 
 #### The body explains the WHY
 
-Answer: What problem? Why now? Why this approach?
+Answer: what problem?
+Why now?
+Why this approach?
 
 **Forbidden patterns** (the diff already shows the what):
 - "This change/commit introduces/adds/creates..."
@@ -90,7 +93,8 @@ Answer: What problem? Why now? Why this approach?
 
 ### 6. Wrap the body
 
-Do not rely on the LLM to respect line length. Wrap the body (not the title) at 80 characters using `fmt`:
+Do not rely on the LLM to respect line length.
+Wrap the body (not the title) at 80 characters using `fmt`:
 
 ```bash
 echo "<body>" | fmt -w 80

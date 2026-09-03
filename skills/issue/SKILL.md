@@ -5,7 +5,8 @@ description: Create an issue (GitHub) or issue (GitLab) focused on the problem, 
 
 # Issue
 
-Create issues that stay focused on the problem. A good issue describes what is wrong or missing, not how to fix it.
+Create issues that stay focused on the problem.
+A good issue describes what is wrong or missing, not how to fix it.
 
 ## Workflow
 
@@ -21,7 +22,8 @@ git remote get-url origin
 
 ### 2. Create or update
 
-Default to creating a new issue. Only treat it as an update if the user explicitly says so and gives an issue number or URL.
+Default to creating a new issue.
+Only treat it as an update if the user explicitly says so and gives an issue number or URL.
 
 For an update, fetch the existing issue first and use it as the starting point for the interview:
 
@@ -30,7 +32,8 @@ For an update, fetch the existing issue first and use it as the starting point f
 
 ### 3. Interview to isolate the problem
 
-Act like a Product Owner reviewing a request: if the user opens with a solution ("add a retry button", "cache the response"), don't take it at face value. Ask what breaks or what's missing without it, until the actual problem is clear.
+Act like a Product Owner reviewing a request: if the user opens with a solution ("add a retry button", "cache the response"), don't take it at face value.
+Ask what breaks or what's missing without it, until the actual problem is clear.
 
 - Ask targeted questions, never generic ones ("why is this an issue?" is useless; "what happens today when X, and what should happen instead?" is useful)
 - Keep asking until the problem can be stated in 1-3 sentences
@@ -39,7 +42,10 @@ Act like a Product Owner reviewing a request: if the user opens with a solution 
 
 ### 4. Gather context
 
-Think like the maintainer who will triage this issue: what would they need to reproduce or locate the problem? Pull only what's relevant and available, don't force a fixed template. Examples: OS/browser for a UI bug, a command name for a CLI, an environment or config for infra, a file/module for a code-level issue. Skip anything not applicable.
+Think like the maintainer who will triage this issue: what would they need to reproduce or locate the problem?
+Pull only what's relevant and available, don't force a fixed template.
+Examples: OS/browser for a UI bug, a command name for a CLI, an environment or config for infra, a file/module for a code-level issue.
+Skip anything not applicable.
 
 ### 5. Generate title and description
 
@@ -96,6 +102,7 @@ What is wrong or missing. The core of the issue.
 - GitHub: `gh issue edit <number> --title "<title>" --body "<body>"`
 - GitLab: `glab issue update <number> --title "<title>" --description "<body>"`
 
-Pass `<body>` via a heredoc, never a literal `"..."` string. Write each paragraph as a single unwrapped line, don't hard-wrap prose at ~80/110 characters like a text editor would; let Markdown soft-wrap it.
+Pass `<body>` via a heredoc, never a literal `"..."` string.
+Write each paragraph as a single unwrapped line, don't hard-wrap prose at ~80/110 characters like a text editor would; let Markdown soft-wrap it.
 
 Show the issue URL when done.
