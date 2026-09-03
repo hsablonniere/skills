@@ -19,6 +19,7 @@ git remote get-url origin
 
 - Contains `github.com` → GitHub, use `gh`
 - Contains `gitlab` → GitLab, use `glab`
+- Neither → stop, tell the user the platform isn't supported
 
 ### 2. Gather branch info
 
@@ -94,7 +95,11 @@ Use **only the relevant sections** — skip empty ones:
 Closes #NN
 
 ## Context
-Why this change exists. 1-2 sentences + bullet points.
+<!-- only if background is needed to understand the problem -->
+Situation as it is today. 1-2 sentences + bullet points.
+
+## Problem
+What is wrong or missing with that situation.
 
 ## Proposal
 Summary of the approach and technical choices.
@@ -128,6 +133,8 @@ Summary of the approach and technical choices.
 #### Rules
 
 - Focus on the **why** and **how to review**, not the what (the diff is there for that)
+- `## Problem` is always present
+- `## Context` only if background is needed to understand the problem
 - Only include sections that have meaningful content
 - Only include TODO section if the user explicitly asked for a draft
 - Only include `Closes #NN` if the user provided a real issue number — never use placeholders like `#XXXXX` or `#NN`
@@ -156,5 +163,7 @@ Add `--draft` if the user asked for a draft.
 
 - GitHub: `gh pr edit --title "<title>" --body "<body>"`
 - GitLab: `glab mr update --title "<title>" --description "<body>"`
+
+Pass `<body>` via a heredoc, never a literal `"..."` string. Write each paragraph as a single unwrapped line — do not hard-wrap prose at ~80 characters like a text editor would; let Markdown soft-wrap it.
 
 Show the PR/MR URL when done.
