@@ -51,7 +51,7 @@ Skip anything not applicable.
 
 #### Title
 
-- Short and descriptive (< 72 characters)
+- Short and descriptive (< 85 characters)
 - English, lowercase (except proper nouns)
 - States the problem, not the fix (`"login fails with expired token"`, not `"add token refresh"`)
 
@@ -60,6 +60,9 @@ Skip anything not applicable.
 Use only the relevant sections, skip empty ones:
 
 ```markdown
+## TL;DR
+<!-- 200-250 characters, summarizing context, problem and impact -->
+
 ## Context
 <!-- Only what's relevant: environment, versions, where it happens -->
 
@@ -79,15 +82,23 @@ What is wrong or missing. The core of the issue.
 
 ## Solution ruled out
 <!-- Optional, what won't work and why -->
+
+## Open questions
+<!-- Optional, last section, what stays undecided -->
 ```
 
 #### Rules
 
+- `## TL;DR` is present by default, as the first section, unless the user declines it
+- `## TL;DR` is a 200-250 character summary of the context, the problem and its impact, written as plain prose
+- `## TL;DR` never mentions the considered or ruled out solutions, it describes the situation only
 - `## Problem` is always present
 - `## Context` only if it helps a maintainer locate or reproduce the issue
 - `### How to reproduce` is a subsection of `## Problem`, only for bugs with clear repro steps
 - `### Impact` only if scope/severity isn't already obvious
 - `## Solution considered` / `## Solution ruled out` only if the interview surfaced actual candidate solutions, never invented
+- `## Open questions` optional, always the last section, for what the interview left undecided
+- `## Open questions` stays at H2 even when some questions are about a considered solution, because others question the problem framing itself
 - No labels, no assignees, no milestone unless the user explicitly asks
 
 ### 6. Create or update the issue
