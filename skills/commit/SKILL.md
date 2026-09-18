@@ -70,21 +70,42 @@ Never ask vague questions like "Why this change?" or "What was the problem?".
 ```
 type(scope): short description
 
-One or two paragraphs explaining the context and motivation.
-Each paragraph is between 125 and 250 characters.
+One paragraph stating the problem and how this change resolves it.
 ```
 
 #### Rules
 
 - Title < 72 characters, english, lowercase
 - Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `ci`
-- Body: 1-2 paragraphs, 125-250 chars each
+- Body: one paragraph of 150 to 250 characters by default
+- A second paragraph only when there is a genuinely separate point to make, such as a caveat or a migration note
 
 #### The body explains the WHY
 
-Answer: what problem?
-Why now?
-Why this approach?
+Open with the problem, in the past tense.
+State what was wrong or missing before this change, and its consequence.
+
+Close with the resolution only when that clause carries something the diff does not already show: a cross-reference to an existing pattern, a decision, a scope.
+Drop it when it would merely restate the diff.
+
+> The features file was read again on every check, and the read was async, which forced all callers up to the command tree construction to await.
+> It's now loaded once at startup and reloaded after a write, just like the config file.
+
+The closing clause earns its place here for "just like the config file", not for "loaded once at startup" which the diff shows anyway.
+
+Be concrete.
+List the actual limitations rather than alluding to them.
+
+Bad: "The JS git implementation has some limitations."
+Good: "The pure JS git implementation is HTTP-only, slow on repositories with rewritten history, times out on large pushes and can't deploy from a linked worktree."
+
+Point at existing conventions in the codebase.
+When the change follows a pattern already used elsewhere, name it: it tells the reviewer the approach was not invented for this commit.
+Verify it first, "just like the config file" is only worth writing after reading how the config file is actually handled.
+
+Naming symbols is encouraged.
+`isFeatureEnabled()` or `clever features disable system-git` give the reader an entry point.
+What is forbidden is narrating the edit, not mentioning code.
 
 **Forbidden patterns** (the diff already shows the what):
 - "This change/commit introduces/adds/creates..."
