@@ -140,6 +140,11 @@ Summary of the approach and technical choices.
 - Only include TODO section if the user explicitly asked for a draft
 - Only include `Closes #NN` if the user provided a real issue number — never use placeholders like `#XXXXX` or `#NN`
 
+#### Preview
+
+Write the title and description to a draft file and show it with the `markdown-preview` skill.
+Apply the user's feedback to the draft file, then use its final content as `<body>` in the next steps.
+
 ### 7. Push branch if needed
 
 ```bash
