@@ -101,6 +101,11 @@ What is wrong or missing. The core of the issue.
 - `## Open questions` stays at H2 even when some questions are about a considered solution, because others question the problem framing itself
 - No labels, no assignees, no milestone unless the user explicitly asks
 
+#### Preview
+
+Write the title and description to a draft file and show it with the `markdown-preview` skill.
+Apply the user's feedback to the draft file, then use its final content as `<body>` in the next step.
+
 ### 6. Create or update the issue
 
 **Create (new issue):**
